@@ -1,4 +1,4 @@
-def right(a):
+def ft_straight_code(a):
     if a < 0:
         a = -1 * a
         t = True
@@ -16,36 +16,28 @@ def right(a):
     return n
 
 
-def dovod(a):
+def ft_reverse_code(a):
     if a < 0:
         a = -1 * a
         t = True
     else:
         t = False
-    a = right(a)
+    a = ft_straight_code(a)
     b = 0
-    d = 10
-    x = 7
-    while x != -1:
-        c = (a // (d ** x)) % 10
-        x -= 1
-        if c == 0:
-            c += 1
-        else:
-            c -= 1
-        b += c * (10 ** (x + 1))
-    if not t:
-        b -= 10 ** 7
-    return b
+    i = 10
+    a1 = 0
+    while b != 7:
+        if (a // (i ** b)) % 10 == 0:
+            a1 += 10 ** b
+        b += 1
+    if t:
+        a1 += 10 ** 7
+    return a1
 
-def last(a):
+
+def ft_additional_code(a):
     if a < 0:
-        return dovod(a + 1)
-    return dovod(a - 1)
-
-
-
-
-print(right(10))
-print(dovod(-10))
-print(last(-10))
+        return ft_reverse_code(a + 1)
+    if a > 0:
+        return ft_reverse_code(a - 1)
+    return 0
