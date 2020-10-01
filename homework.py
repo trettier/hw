@@ -38,8 +38,14 @@ def dovod(a):
         b -= 10 ** 7
     return b
 
-
 def last(a):
     if a < 0:
         return dovod(a + 1)
     return dovod(a - 1)
+
+
+
+
+print(right(10))
+print(dovod(-10))
+print(last(-10))
